@@ -3,7 +3,7 @@ import PlaceDetails from "../PlaceDetails/PlaceDetails"
 import {CircularProgress, Grid, Typography, InputLabel, MenuItem, FormControl, Select} from '@material-ui/core'
 import useStyles from "./styles"
 
-function List() {
+function List(props) {
     
     const classes = useStyles();
     const [type, setType] = useState("restaurants");
@@ -30,11 +30,11 @@ function List() {
                 </Select>
             </FormControl>
             <Grid container spacing={3} className={classes.list}>
-                {/* {places?.map((place, i) => (
+                {props.places?.map((place, i) => (
                     <Grid item key={i} xs={12}>
                         <PlaceDetails place={place}/>
                     </Grid>
-                ))} */}
+                ))} 
             </Grid>
         </div>
     )
